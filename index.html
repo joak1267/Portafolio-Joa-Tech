@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joaquín Gil Apesteguia | Desarrollador Full Stack Jr.</title>
+    
+    <!-- Fuentes modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./img/icons8-computer-60.ico">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style-final.css">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <style>
+        /* Estilos para mensajes del formulario */
+        .alert-message {
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .alert-success {
+            background-color: rgba(21, 87, 36, 0.1);
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .alert-error {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .alert-loading {
+            background-color: rgba(23, 162, 184, 0.1);
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            display: block;
+        }
+        
+        .fa-spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación Dinámica -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="brand-logo">
+                    <i class="fas fa-code"></i>
+                    <span class="brand-text">Joa Tech</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item">
+                        <button class="btn-theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Dinámica -->
+    <section id="inicio" class="inicio-section">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 text-center mb-5 mb-lg-0">
+                    <div class="profile-container">
+                        <div class="profile-float">
+                            <img src="img/20250614_173951.jpg" alt="Joaquin Gil Apesteguia" class="profile-img">
+                            <div class="profile-glow"></div>
+                            <div class="profile-tech-badge">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="profile-tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JS</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <p class="greeting animate__animated animate__fadeInUp">
+                        <span class="wave">👋</span> ¡Hola! Soy
+                    </p>
+                    <h1 class="name-title animate__animated animate__fadeInUp">
+                        Joaquín <span class="highlight typed-name">Gil</span> Apesteguia
+                    </h1>
+                    <h2 class="role animate__animated animate__fadeInUp">
+                        <span class="dynamic-text">
+                            <span class="text-item active">Técnico en Programación Web</span>
+                            <span class="text-item">Desarrollador Full Stack Jr.</span>
+                            <span class="text-item">Desarrollador de Software Junior</span>
+                        </span>
+                    </h2>
+                    <p class="intro-text animate__animated animate__fadeInUp">
+                        Soy Joaquin Gil, un técnico en programación de 21 años apasionado por el desarrollo web y la tecnología. 
+                        Desde los 16 años me dedico a expandir mis conocimientos en programación, enfocándome en crear soluciones digitales innovadoras.
+                    </p>
+                    <div class="hero-actions animate__animated animate__fadeInUp">
+                        <a href="#portfolio" class="btn btn-primary me-3 btn-hover-effect">
+                            <i class="fas fa-code me-2"></i>Ver Proyectos
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-hover-effect">
+                            <i class="fas fa-envelope me-2"></i>Contactar
+                        </a>
+                    </div>
+                    <div class="social-icons mt-4 animate__animated animate__fadeInUp">
+                        <a href="https://github.com/joak1267" target="_blank" class="social-icon" data-tooltip="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joaquin-gil-apesteguia-ignacio-a963a737a/" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:joaquin.apesteguia.tech@gmail.com" class="social-icon" data-tooltip="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/541124673417" target="_blank" class="social-icon" data-tooltip="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#sobre-mi" class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </a>
+    </section>
+
+    <!-- Sobre Mí Dinámico -->
+    <section id="sobre-mi" class="sobre-mi-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Sobre <span class="highlight">Mí</span></h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="100">
+                        Naci en la plena epoca de la revolucion digital en los años 2000, y toda mi vida estuve conectado tanto a los juegos como las computadoras, me nacio la pasion para poder trabajar en algo que tanto me gustaba desde los 12 años y hoy puedo decir con orgullo que disfruto lo que hago.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="personal-info-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Información Personal</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Nombre Completo:</strong>
+                                <p>Joaquin Gil Apesteguia</p>
+                            </div>
+                        </div>
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-birthday-cake"></i>
+                            <div>
+                                <strong>Fecha de Nacimiento:</strong>
+                                <p>22/06/2004</p>
+                            </div>
+                        </div>
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Localidad:</strong>
+                                <p>Monte Castro (CABA), Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <strong>Nivel de Inglés:</strong>
+                                <p>Básico</p>
+                            </div>
+                        </div>
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p><a href="mailto:joaquin.apesteguia.tech@gmail.com" class="email-link">joaquin.apesteguia.tech@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Teléfono:</strong>
+                                <p><a href="https://wa.me/541124673417" target="_blank" class="phone-link">11-2467-3417</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animated-stats mt-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="6">0</div>
+                                <div class="stat-label">Años de Experiencia</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="15">0</div>
+                                <div class="stat-label">Proyectos Completados</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="4">0</div>
+                                <div class="stat-label">Certificaciones</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Experiencias Laborales</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación Dinámica -->
+    <section id="educacion" class="educacion-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Educación</h2>
+            
+            <!-- Técnico en Programación -->
+            <div class="education-card hover-grow" data-aos="fade-right">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3>Escuela Técnica N°35 Ing. Eduardo Latzina</h3>
+                        <p class="degree">Técnico en Programación</p>
+                        <p class="date">2018 - 2024</p>
+                    </div>
+                </div>
+                <p>
+                    Formación técnica completa en programación, desarrollo web, y tecnologías de la información. 
+                    Especialización en desarrollo de software, bases de datos, y tecnologías web modernas.
+                </p>
+                <div class="education-actions">
+                    <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certTecnicoModal">
+                        <i class="fas fa-certificate me-2"></i>Ver Título
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Cursos y Certificaciones -->
+            <div class="education-card hover-grow" data-aos="fade-left">
+                <h3>Cursos y Certificaciones Complementarias</h3>
+                <div class="courses-list">
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Desarrollo Web 1</span>
+                            <span class="course-date">2021</span>
+                        </div>
+                        <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certWeb1Modal">
+                            Ver Certificado
+                        </button>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Desarrollo Web 2</span>
+                            <span class="course-date">2024</span>
+                        </div>
+                        <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certWeb2Modal">
+                            Ver Certificado
+                        </button>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Taller de Inglés - Nivel Intermedio</span>
+                            <span class="course-date">2020</span>
+                        </div>
+                        <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certInglesModal">
+                            Ver Certificado
+                        </button>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Aprende Programando</span>
+                            <span class="course-date">2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral Dinámica -->
+    <section id="experiencia" class="experiencia-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experiencia Laboral</h2>
+            
+            <div class="experience-card hover-grow" data-aos="fade-right">
+                <div class="experience-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3>GFM Dispositivos</h3>
+                        <p class="position">Administrador Web y Ventas</p>
+                        <p class="date">2023 - 2024</p>
+                    </div>
+                </div>
+                <ul class="exp-list">
+                    <li><i class="fas fa-check"></i> Administración de página web: contenido, edición y mantenimiento</li>
+                    <li><i class="fas fa-check"></i> Soporte técnico básico</li>
+                    <li><i class="fas fa-check"></i> Configuracion y revision de productos electrodomesticos </li>
+                </ul>
+            </div>
+
+            <div class="experience-card hover-grow" data-aos="fade-left">
+                <div class="experience-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3>Clan B Beauty Shop</h3>
+                        <p class="position">Gestión de Marketing y Distribución</p>
+                        <p class="date">2021 - 2023</p>
+                    </div>
+                </div>
+                <ul class="exp-list">
+                    <li><i class="fas fa-check"></i> Subida diaria de publicidad en redes sociales y plataformas digitales</li>
+                    <li><i class="fas fa-check"></i> Gestión y entrega de productos a clientes en Buenos Aires</li>
+                    <li><i class="fas fa-check"></i> Atención al cliente</li>
+                    <li><i class="fas fa-check"></i> Creación de contenido visual para marketing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Técnicas Dinámicas -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Habilidades <span class="highlight">Técnicas</span></h2>
+            
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code me-2"></i>Frontend</h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-server me-2"></i>Backend & Bases de Datos</h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MySQL</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tools-section mt-5" data-aos="zoom-in">
+                <h4 class="text-center mb-4">Herramientas que Utilize</h4>
+                <div class="tools-grid">
+                    <div class="tool-item hover-lift">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JS</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fa-brands fa-node-js"></i>
+                        <span>Node.JS</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fa-brands fa-wordpress"></i>
+                        <span>WordPress</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fas fa-terminal"></i>
+                        <span>Terminal</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tool-item hover-lift">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL Workbench</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio de Proyectos Dinámico -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Portafolio de <span class="highlight">Proyectos</span></h2>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card hover-grow">
+                        <div class="project-image">
+                            <img src="img/img1.jpg" alt="Proyecto 1 - Elige Tu Propia Aventura">
+                        </div>
+                        <div class="project-content">
+                            <h3>Elige Tu Propia Aventura</h3>
+                            <p>Mini juego interactivo web embebido en una página HTML.</p>
+                            <div class="project-links">
+                                <a href="https://joak1267.github.io/Tp-1-Generacion-T/" class="btn btn-sm btn-success">
+                                    <i class="fas fa-eye me-1"></i>Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card hover-grow">
+                        <div class="project-image">
+                            <img src="img/img2.jpg" alt="Proyecto 2 - Web Electrodomesticos">
+                        </div>
+                        <div class="project-content">
+                            <h3>Web Electrodomesticos</h3>
+                            <p>Página web corporativa para una empresa de electrodomésticos.</p>
+                            <div class="project-links">
+                                <a href="https://joak1267.github.io/Tp-2-Web-/" class="btn btn-sm btn-success">
+                                    <i class="fas fa-eye me-1"></i>Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card hover-grow">
+                        <div class="project-image">
+                            <img src="img/img3.jpg" alt="Proyecto 3 - Copia de Página Web">
+                        </div>
+                        <div class="project-content">
+                            <h3>Clon de Página Web</h3>
+                            <p>Recreación fiel de una página web existente.</p>
+                            <div class="project-links">
+                                <a href="https://joak1267.github.io/TP3generacionT/" class="btn btn-sm btn-success">
+                                    <i class="fas fa-eye me-1"></i>Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card hover-grow">
+                        <div class="project-image">
+                            <img src="img/img4.jpg" alt="Proyecto 4 - Formulario">
+                        </div>
+                        <div class="project-content">
+                            <h3>Formulario Interactivo</h3>
+                            <p>Formulario con validación y diseño moderno.</p>
+                            <div class="project-links">
+                                <a href="https://joak1267.github.io/tp4GeneracionT/" class="btn btn-sm btn-success">
+                                    <i class="fas fa-eye me-1"></i>Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- BOTÓN VER MÁS -->
+            <div class="row mt-5" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-12 text-center">
+                    <a href="portfolio_full.html" class="btn btn-primary btn-lg btn-hover-effect" id="ver-mas-portfolio">
+                        <i class="fas fa-eye me-2"></i>Ver Más Proyectos
+                        <span class="btn-glow"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO CON EMAILJS FUNCIONAL -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                ¿Interesado en trabajar juntos? ¡No dudes en contactarme!
+            </p>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- FORMULARIO CON EMAILJS -->
+                    <form id="contact-form" data-aos="zoom-in">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="user_name" placeholder="Nombre *" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="user_email" placeholder="Correo electrónico *" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="user_phone" placeholder="Teléfono *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Mensaje *" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-hover-effect">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            <span class="btn-glow"></span>
+                        </button>
+                        <div id="form-message" class="mt-3 text-center"></div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-info mt-5" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-item hover-lift">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email</h4>
+                            <p>joaquin.apesteguia.tech@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-item hover-lift">
+                            <i class="fas fa-phone"></i>
+                            <h4>Teléfono</h4>
+                            <p>11-2467-3417</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-item hover-lift">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Ubicación</h4>
+                            <p>Monte Castro, CABA, Argentina</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links text-center mt-4">
+                    <a href="https://github.com/joak1267" target="_blank" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joaquin-gil-apesteguia-ignacio-a963a737a/" target="_blank" class="social-link" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:joaquin.apesteguia.tech@gmail.com" class="social-link" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/541124673417" target="_blank" class="social-link" data-tooltip="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Joaquin Gil Apesteguia 2025 | Técnico en Programación</p>
+            <p class="footer-note">Desarrollado con <i class="fas fa-heart"></i> y mucho código</p>
+        </div>
+    </footer>
+
+    <!-- Modales para Certificados -->
+    <div class="modal fade certificate-modal" id="certTecnicoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-graduation-cap me-2"></i>Título de Técnico en Programación
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="certificate-display">
+                        <div class="certificate-content">
+                            <h4>Escuela Técnica N°35</h4>
+                            <h5>Ing. Eduardo Latzina</h5>
+                            <div class="certificate-body">
+                                <h3>TÍTULO OFICIAL</h3>
+                                <h4>TÉCNICO EN PROGRAMACIÓN</h4>
+                                <p>Otorgado a: <strong>JOAQUÍN GIL APESTEGUIA</strong></p>
+                                <p>Por haber completado satisfactoriamente la carrera técnica</p>
+                                <p>Período: 2018 - 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade certificate-modal" id="certWeb1Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-certificate me-2"></i>Certificado - Desarrollo Web 1
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/Desarrollo Web 1 2021.jpg" alt="Certificado Desarrollo Web 1" class="img-fluid certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade certificate-modal" id="certWeb2Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-certificate me-2"></i>Certificado - Desarrollo Web 2
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/Desarrollo Web 2 2024.jpg" alt="Certificado Desarrollo Web 2" class="img-fluid certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade certificate-modal" id="certInglesModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-certificate me-2"></i>Certificado - Taller de Inglés
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/Taller Ingles 2020 Nivel Intermedio.jpg" alt="Certificado Taller de Inglés" class="img-fluid certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // ============================================
+        // INICIALIZACIÓN EMAILJS - TUS CREDENCIALES
+        // ============================================
+        (function() {
+            // TU PUBLIC KEY - VERIFICA QUE ESTÉ BIEN
+            emailjs.init("jeM9wPRA9hYUXfgAc");
+            console.log("✅ EmailJS inicializado con Public Key: fMrH8vgrQUG9k3i1Y");
+        })();
+
+        // ============================================
+        // INICIALIZACIÓN COMPLETA DE LA PÁGINA
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Inicializar AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+            
+            // 2. Partículas para el hero
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        color: { value: "#ffffff" },
+                        shape: { type: "circle" },
+                        opacity: { value: 0.3, random: true },
+                        size: { value: 3, random: true },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#ffffff",
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 2,
+                            direction: "none",
+                            random: true,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false
+                        }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: { enable: true, mode: "repulse" },
+                            onclick: { enable: true, mode: "push" }
+                        }
+                    }
+                });
+            }
+            
+            // 3. Texto dinámico en hero
+            const textItems = document.querySelectorAll('.text-item');
+            let currentIndex = 0;
+            
+            function rotateText() {
+                if (textItems.length > 0) {
+                    textItems[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % textItems.length;
+                    textItems[currentIndex].classList.add('active');
+                }
+            }
+            
+            if (textItems.length > 0) {
+                setInterval(rotateText, 3000);
+            }
+            
+            // 4. Efecto de escritura para el nombre
+            const typedName = document.querySelector('.typed-name');
+            if (typedName) {
+                const nameText = typedName.textContent;
+                typedName.textContent = '';
+                let i = 0;
+                
+                function typeWriter() {
+                    if (i < nameText.length) {
+                        typedName.textContent += nameText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    }
+                }
+                
+                setTimeout(typeWriter, 500);
+            }
+            
+            // 5. Contadores animados
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-count');
+                    const count = +counter.innerText;
+                    const increment = target / 200;
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+            
+            // 6. Animar barras de habilidades
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const width = bar.getAttribute('data-width');
+                            bar.style.width = `${width}%`;
+                            observer.unobserve(bar);
+                        }
+                    });
+                });
+                observer.observe(bar);
+            });
+            
+            // 7. Toggle de tema claro/oscuro
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-theme');
+                    const icon = themeToggle.querySelector('i');
+                    if (document.body.classList.contains('dark-theme')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+                
+                // Cargar tema guardado
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.querySelector('i').classList.remove('fa-moon');
+                    themeToggle.querySelector('i').classList.add('fa-sun');
+                }
+            }
+            
+            // ============================================
+            // 8. FORMULARIO DE CONTACTO CON EMAILJS
+            // ============================================
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    console.log("🚀 Enviando formulario con EmailJS...");
+                    
+                    // Validar campos
+                    const name = this.user_name.value.trim();
+                    const email = this.user_email.value.trim();
+                    const phone = this.user_phone.value.trim();
+                    const message = this.message.value.trim();
+                    
+                    if (!name || !email || !phone || !message) {
+                        showFormMessage("❌ Completa todos los campos obligatorios (*)", "error");
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        showFormMessage("❌ Ingresa un email válido", "error");
+                        return;
+                    }
+                    
+                    // Cambiar estado del botón
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+                    submitBtn.disabled = true;
+                    
+                    // Mostrar mensaje de carga
+                    showFormMessage("⏳ Enviando tu mensaje, por favor espera...", "loading");
+                    
+                    // ============================================
+                    // ENVIAR CON EMAILJS - TUS CREDENCIALES
+                    // ============================================
+                    // TU SERVICE ID y TEMPLATE ID
+                    emailjs.sendForm('service_82dhp4l', 'template_sw19kez', this)
+                        .then(function(response) {
+                            console.log("✅ ÉXITO - Email enviado:", response);
+                            
+                            // Mostrar éxito
+                            showFormMessage("✅ ¡Mensaje enviado exitosamente! Te responderé pronto.", "success");
+                            
+                            // Limpiar formulario
+                            contactForm.reset();
+                            
+                            // Restaurar botón después de 3 segundos
+                            setTimeout(() => {
+                                submitBtn.innerHTML = originalText;
+                                submitBtn.disabled = false;
+                            }, 3000);
+                            
+                            // Ocultar mensaje después de 5 segundos
+                            setTimeout(() => {
+                                document.getElementById('form-message').innerHTML = '';
+                            }, 5000);
+                            
+                        }, function(error) {
+                            console.error("❌ ERROR - EmailJS:", error);
+                            
+                            // Mostrar error específico
+                            let errorMsg = "❌ Error al enviar. Intenta de nuevo.";
+                            
+                            if (error.text && error.text.includes("Invalid grant")) {
+                                errorMsg = "❌ Error: Reconecta tu Gmail en EmailJS.com → Email Services → Reconnect Gmail";
+                            } else if (error.text && error.text.includes("service not found")) {
+                                errorMsg = "❌ Error: Service ID incorrecto. Verifica en EmailJS";
+                            } else if (error.text && error.text.includes("template not found")) {
+                                errorMsg = "❌ Error: Template ID incorrecto. Verifica en EmailJS";
+                            }
+                            
+                            showFormMessage(errorMsg, "error");
+                            
+                            // Restaurar botón
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        });
+                });
+            }
+            
+            // Función para mostrar mensajes en el formulario
+            function showFormMessage(message, type) {
+                const messageDiv = document.getElementById('form-message');
+                let alertClass = 'alert-loading';
+                let icon = 'fa-info-circle';
+                
+                switch(type) {
+                    case 'success':
+                        alertClass = 'alert-success';
+                        icon = 'fa-check-circle';
+                        break;
+                    case 'error':
+                        alertClass = 'alert-error';
+                        icon = 'fa-exclamation-circle';
+                        break;
+                    case 'loading':
+                        alertClass = 'alert-loading';
+                        icon = 'fa-spinner fa-spin';
+                        break;
+                }
+                
+                messageDiv.innerHTML = `
+                    <div class="alert-message ${alertClass}">
+                        <i class="fas ${icon} me-2"></i>
+                        ${message}
+                    </div>
+                `;
+            }
+            
+            // Validar email
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            // 9. Smooth scroll para navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#' || targetId === '#0') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 10. Cambiar clase activa en navegación al hacer scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Efecto en navbar al hacer scroll
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // ============================================
+            // PRUEBA DE CONEXIÓN CON EMAILJS
+            // ============================================
+            console.log("🔍 Probando conexión con EmailJS...");
+            setTimeout(() => {
+                // Prueba básica de conexión
+                emailjs.send("service_82dhp4l", "template_sw19kez", {
+                    user_name: "Test Connection",
+                    user_email: "test@example.com",
+                    user_phone: "123456789",
+                    message: "Esta es una prueba de conexión"
+                })
+                .then(res => console.log("✅ Conexión OK - Status:", res.status))
+                .catch(err => console.error("❌ Conexión falló:", err.text || err));
+            }, 2000);
+        });
+        
+        // ============================================
+        // FUNCIÓN PARA PROBAR MANUALMENTE (DESARROLLO)
+        // ============================================
+        window.testEmailJS = function() {
+            console.log("🧪 Probando EmailJS manualmente...");
+            
+            emailjs.send("service_ixufn0u", "template_tufjifv", {
+                user_name: "Prueba Manual",
+                user_email: "prueba@test.com",
+                user_phone: "11-2467-3417",
+                message: "Este es un mensaje de prueba enviado manualmente desde la consola"
+            })
+            .then(res => {
+                console.log("✅ Prueba exitosa:", res);
+                alert("✅ PRUEBA EXITOSA\nRevisa tu email: joaquin.apesteguia.tech@gmail.com");
+            })
+            .catch(err => {
+                console.error("❌ Prueba fallida:", err);
+                alert("❌ PRUEBA FALLIDA\nError: " + (err.text || err));
+            });
+        };
+        
+        // Agregar botón de prueba en desarrollo
+        const testBtn = document.createElement('button');
+        testBtn.innerHTML = '<i class="fas fa-vial"></i> TEST';
+        testBtn.style.position = 'fixed';
+        testBtn.style.bottom = '20px';
+        testBtn.style.right = '20px';
+        testBtn.style.background = '#ff9900';
+        testBtn.style.color = 'black';
+        testBtn.style.border = 'none';
+        testBtn.style.padding = '10px 15px';
+        testBtn.style.borderRadius = '5px';
+        testBtn.style.cursor = 'pointer';
+        testBtn.style.fontWeight = 'bold';
+        testBtn.style.zIndex = '1000';
+        testBtn.onclick = testEmailJS;
+        document.body.appendChild(testBtn);
+    </script>
+</body>
+</html>

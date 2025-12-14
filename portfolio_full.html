@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Completo | Joa Tech</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-light: #6366f1;
+            --primary-dark: #4338ca;
+            --secondary-color: #0f172a;
+            --accent-color: #f59e0b;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --hero-bg-light: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%);
+            --hero-bg-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 50%, #f0f9ff 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* ========== NAVBAR ========== */
+        .portfolio-navbar {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.97) 100%);
+            backdrop-filter: blur(12px);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 30px rgba(79, 70, 229, 0.08);
+        }
+
+        .nav-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-brand i {
+            color: var(--accent-color);
+        }
+        
+        /* ========== DARK MODE STYLES ========== */
+        body.dark-mode {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .portfolio-navbar {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+            border-bottom: 1px solid rgba(71, 85, 105, 0.8);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .nav-brand {
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .btn-outline-primary {
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+
+        body.dark-mode .btn-outline-primary:hover {
+            background-color: #6366f1;
+            color: white;
+        }
+
+        body.dark-mode .project-card {
+            background: #1e293b;
+            border-color: #334155;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark-mode .project-card:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            border-color: #4f46e5;
+        }
+
+        body.dark-mode .project-content h3 {
+            color: #f1f5f9;
+        }
+
+        body.dark-mode .project-content p {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .tech-tag {
+            background: #334155;
+            color: #cbd5e1;
+            border-color: #475569;
+        }
+
+        body.dark-mode .filter-tag {
+            background: #1e293b;
+            border-color: #475569;
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .filter-tag:hover {
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+
+        body.dark-mode .filter-tag.active {
+            background: #4f46e5;
+            color: white;
+            border-color: #4f46e5;
+        }
+
+        body.dark-mode .btn-back-home {
+            background: #1e293b;
+            color: #6366f1;
+            border-color: #6366f1;
+        }
+
+        body.dark-mode .btn-back-home:hover {
+            background: #6366f1;
+            color: white;
+        }
+
+        body.dark-mode .back-section h3 {
+            color: #f1f5f9;
+        }
+
+        body.dark-mode .back-section p {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .portfolio-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .footer-name {
+            color: white;
+        }
+
+        body.dark-mode .social-links a {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        body.dark-mode .copyright {
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Botón toggle para modo oscuro/claro */
+        .theme-toggle {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-left: 1rem;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: rotate(15deg);
+        }
+
+        body.dark-mode .theme-toggle {
+            border-color: #f59e0b;
+            color: #f59e0b;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background: #f59e0b;
+            color: #0f172a;
+        }
+        
+        /* ========== HERO SECTION ========== */
+        .portfolio-hero {
+            background: var(--hero-bg-light);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            transition: all 0.5s ease;
+        }
+
+        body.dark-mode .portfolio-hero {
+            background: var(--hero-bg-dark);
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.8) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.8) 2px, transparent 2px);
+            background-size: 60px 60px;
+        }
+        
+        .portfolio-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            background: linear-gradient(90deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .portfolio-hero h1 {
+            background: linear-gradient(90deg, #fff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .portfolio-hero .lead {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            position: relative;
+            color: #e0e7ff;
+            line-height: 1.7;
+        }
+
+        body.dark-mode .portfolio-hero .lead {
+            color: #cbd5e1;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fbbf24;
+            display: block;
+        }
+
+        body.dark-mode .stat-number {
+            color: #f59e0b;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: #e0e7ff;
+        }
+
+        body.dark-mode .stat-label {
+            color: #cbd5e1;
+        }
+        
+        /* ========== FILTROS ========== */
+        .filter-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .filter-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .filter-tag {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            background: white;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .filter-tag:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.1);
+        }
+        
+        .filter-tag.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 20px rgba(79, 70, 229, 0.2);
+        }
+        
+        /* ========== TARJETAS DE PROYECTOS ========== */
+        .projects-grid {
+            padding: 2rem 0;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-light);
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-image img:not([src]), 
+        .project-image img[src=""], 
+        .project-image img[src="#"] {
+            display: none;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.08);
+        }
+        
+        .project-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-content {
+            padding: 1.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .project-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-tag {
+            background: var(--light-bg);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+        
+        .project-links .btn {
+            padding: 0.6rem 1.25rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            flex: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .project-links .btn-primary {
+            background: var(--primary-color);
+            border: none;
+        }
+        
+        .project-links .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+        }
+        
+        .project-links .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        
+        .project-links .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* ========== BOTÓN VOLVER ========== */
+        .back-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        .btn-back-home:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.2);
+        }
+        
+        /* ========== FOOTER ========== */
+        .portfolio-footer {
+            background: var(--secondary-color);
+            color: #cbd5e1;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-title {
+            color: var(--primary-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-4px) scale(1.1);
+        }
+        
+        .copyright {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            .portfolio-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                width: auto;
+                min-width: 150px;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-hero {
+                padding: 5rem 0 3rem;
+            }
+            
+            .portfolio-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .portfolio-hero .lead {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .filter-tags {
+                gap: 0.5rem;
+            }
+            
+            .filter-tag {
+                padding: 0.4rem 1.25rem;
+                font-size: 0.85rem;
+            }
+            
+            .project-image {
+                height: 200px;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat-item {
+                width: 80%;
+                max-width: 250px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .portfolio-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .portfolio-hero .lead {
+                font-size: 0.95rem;
+            }
+
+            .project-image {
+                height: 180px;
+            }
+            
+            .project-content {
+                padding: 1.5rem;
+            }
+            
+            .social-links {
+                gap: 1rem;
+            }
+            
+            .social-links a {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .btn-back-home, .btn-primary {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="portfolio-navbar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="nav-brand">
+                    <i class="fas fa-code"></i>
+                    Joa Tech
+                </a>
+                <div class="d-flex align-items-center">
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <a href="index.html" class="btn btn-outline-primary btn-sm ms-3">
+                        <i class="fas fa-home me-1"></i>Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold">Mi Portafolio de Proyectos</h1>
+                    <p class="lead">Una colección completa de mis trabajos en desarrollo web, desde aplicaciones interactivas hasta sitios web profesionales. Cada proyecto representa un desafío superado y una solución implementada.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Tecnologías</span>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Filtros -->
+    <div class="container filter-section">
+        <h3 class="mb-4" data-aos="fade-up">Filtrar por categoría</h3>
+        <div class="filter-tags" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-tag active" data-filter="all">Todos</button>
+            <button class="filter-tag" data-filter="web">Web</button>
+            <button class="filter-tag" data-filter="javascript">JavaScript</button>
+            <button class="filter-tag" data-filter="htmlcss">HTML/CSS</button>
+            <button class="filter-tag" data-filter="otros">Comercios</button>
+        </div>
+    </div>
+
+    <!-- Sección de Proyectos -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="row g-4">
+                    <!-- Proyecto 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-filter="javascript">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/img1.jpg" alt="Proyecto 1 - Elige Tu Propia Aventura" onerror="this.style.display='none'">
+                                <span class="project-badge">JavaScript</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Elige Tu Propia Aventura</h3>
+                                <p>Juego web interactivo con múltiples finales y decisiones que afectan la narrativa. Implementado con JavaScript puro.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/Tp-1-Generacion-T/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-filter="web">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/img2.jpg" alt="Proyecto 2 - Web Electrodomesticos" onerror="this.style.display='none'">
+                                <span class="project-badge">Web</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Web Electrodomésticos</h3>
+                                <p>Sitio web corporativo completamente responsive para una empresa de electrodomésticos con catálogo de productos.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Bootstrap</span>
+                                    <span class="tech-tag">Responsive</span>
+                                    <span class="tech-tag">UI/UX</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/Tp-2-Web-/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-filter="htmlcss">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/img3.jpg" alt="Proyecto 3 - Copia de Página Web" onerror="this.style.display='none'">
+                                <span class="project-badge">HTML/CSS</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Clon de Página Web</h3>
+                                <p>Replicación exacta de un sitio web popular utilizando únicamente HTML y CSS, demostrando habilidades en maquetación.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">Flexbox</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/TP3generacionT/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300" data-filter="web">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/img4.jpg" alt="Proyecto 4 - Formulario" onerror="this.style.display='none'">
+                                <span class="project-badge">Web</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Formulario Interactivo</h3>
+                                <p>Formulario moderno con validación en tiempo real, feedback visual y diseño completamente responsive.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Form Validation</span>
+                                    <span class="tech-tag">CSS Animations</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/tp4GeneracionT/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" data-filter="otros">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/gymimg.jpg" alt="Gimnasio" onerror="this.style.display='none'">
+                                <span class="project-badge">Comercio</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>S&C Fitness Gym</h3>
+                                <p>Sitio web para gimnasio con información de clases, horarios, contacto y diseño enfocado en conversión.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Bootstrap</span>
+                                    <span class="tech-tag">Landing Page</span>
+                                    <span class="tech-tag">SEO</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/SycGimFitnnes/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 6 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500" data-filter="otros">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/reinavilla.jpg" alt="Fábrica de Pastas" onerror="this.style.display='none'">
+                                <span class="project-badge">Comercio</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>La Reina de Villa Luro</h3>
+                                <p>Página web para fábrica de pastas artesanales con 60+ años de tradición. Presenta productos y valores.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS Grid</span>
+                                    <span class="tech-tag">Branding</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/reinavillaluroV2.com/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 7 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600" data-filter="otros">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/ilritorno.jpg" alt="Pizzería" onerror="this.style.display='none'">
+                                <span class="project-badge">Comercio</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Il Ritorno Pizzería</h3>
+                                <p>Sitio para pizzería italiana con menú, horarios, ubicación y sistema de delivery. Diseño cálido y acogedor.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Responsive</span>
+                                    <span class="tech-tag">Google Maps</span>
+                                    <span class="tech-tag">UI Design</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://joak1267.github.io/Il-Ritorno/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 8 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700" data-filter="web">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/Aaronalpha.jpg" alt="Agencia de Turismo" onerror="this.style.display='none'">
+                                <span class="project-badge">Web</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Agencia de Turismo</h3>
+                                <p>Versión alpha de sitio para agencia de viajes especializada en Brasil. Diseño moderno con enfoque en conversión.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Prototipo</span>
+                                    <span class="tech-tag">Diseño UI</span>
+                                    <span class="tech-tag">Landing Page</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://mermediaart.github.io/ARONINRIOWEB/" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt me-1"></i>Ver Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón para volver al inicio -->
+    <section class="back-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h3 class="mb-4" data-aos="fade-up">¿Interesado en trabajar juntos?</h3>
+                    <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Estoy disponible para nuevos proyectos y colaboraciones. No dudes en contactarme.</p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <a href="index.html" class="btn-back-home me-3">
+                            <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
+                        </a>
+                        <a href="mailto:soytotojoaquin@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i>Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-name">Joa Tech</h3>
+                <p class="footer-title">Desarrollador Web Full Stack Jr.</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/joak1267" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joaquin-gil-apesteguia-ignacio-a963a737a/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/541124673417" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/joaco_2206" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                <p class="copyright">© 2025 Todos los derechos reservados. Desarrollado con <i class="fas fa-heart" style="color: #ef4444;"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Sistema de modo claro/oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        // Comprobar tema guardado o preferencia del sistema
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        // Alternar tema
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+        
+        // Filtrado de proyectos mejorado
+        document.querySelectorAll('.filter-tag').forEach(button => {
+            button.addEventListener('click', function() {
+                // Quitar clase active a todos
+                document.querySelectorAll('.filter-tag').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Agregar active al clickeado
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const projects = document.querySelectorAll('[data-filter]');
+                
+                // Animación de filtrado
+                projects.forEach(project => {
+                    if (filter === 'all' || project.getAttribute('data-filter') === filter) {
+                        project.style.opacity = '0';
+                        project.style.transform = 'translateY(20px)';
+                        
+                        setTimeout(() => {
+                            project.style.display = 'block';
+                        }, 150);
+                        
+                        setTimeout(() => {
+                            project.style.opacity = '1';
+                            project.style.transform = 'translateY(0)';
+                            project.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        }, 200);
+                    } else {
+                        project.style.opacity = '0';
+                        project.style.transform = 'translateY(20px)';
+                        
+                        setTimeout(() => {
+                            project.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Efecto suave al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                document.body.style.transform = 'translateY(0)';
+            }, 100);
+        });
+        
+        document.body.style.opacity = '0';
+        document.body.style.transform = 'translateY(20px)';
+        document.body.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    </script>
+</body>
+</html>
