@@ -163,10 +163,6 @@ section {
     color: white !important;
 }
 
-.dark-theme .navbar-toggler-icon {
-    filter: invert(1);
-}
-
 /* Estilos específicos para "Contactar" */
 .nav-contact {
     position: relative;
@@ -2059,4 +2055,5 @@ html {
 .navbar-toggler:focus {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
 }
+
 
