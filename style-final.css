@@ -1963,3 +1963,87 @@ footer p {
         min-height: 36px;
     }
 }
+/* ============================================
+   FIXES ESPECÍFICOS PARA DESPLAZAMIENTO HORIZONTAL
+   ============================================ */
+
+/* FIX para imágenes que puedan causar desbordamiento */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* FIX para el grid de herramientas en móvil */
+@media (max-width: 576px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .tool-item {
+        padding: 15px 10px;
+    }
+}
+
+/* FIX para el texto del tech stack en móvil */
+@media (max-width: 400px) {
+    .profile-tech-stack {
+        gap: 8px;
+    }
+    
+    .profile-tech-stack span {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* FIX para evitar que el contenido se salga en móvil */
+@media (max-width: 767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* FIX para el efecto de partículas en móvil */
+@media (max-width: 768px) {
+    .particles-container {
+        overflow: hidden !important;
+        max-width: 100vw !important;
+    }
+}
+
+/* FIX para los botones en móvil */
+@media (max-width: 576px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .project-links .btn {
+        padding: 8px 15px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* FIX para asegurar que todo esté dentro de la pantalla */
+* {
+    max-width: 100vw;
+}
+
+/* FIX para el scroll suave */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
