@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joaquín Gil Apesteguia | Full Stack Developer</title>
+    
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Joaquín Gil Apesteguia — Desarrollador Full Stack con foco en HTML, CSS, JavaScript, PHP, MySQL y WordPress. Disponible para proyectos freelance y posiciones junior en Buenos Aires, Argentina.">
+    <meta name="keywords" content="desarrollador web, full stack, Buenos Aires, freelance, HTML, CSS, JavaScript, PHP, MySQL, WordPress">
+    <meta name="author" content="Joaquín Gil Apesteguia">
+    <meta property="og:title" content="Joaquín Gil Apesteguia | Full Stack Developer">
+    <meta property="og:description" content="Desarrollo soluciones web full stack — desde el diseño hasta el deploy. Disponible para proyectos freelance y posiciones junior.">
+    <meta property="og:image" content="img/profile.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joaquín Gil Apesteguia | Full Stack Developer">
+    <meta name="twitter:description" content="Desarrollador Full Stack · HTML · CSS · JS · PHP · MySQL · WordPress · Buenos Aires">
+    <meta name="twitter:image" content="img/profile.jpg">
+    
+    <!-- Fuentes modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./img/icons8-computer-60.ico">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style-final.css">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <style>
+        /* Estilos para mensajes del formulario */
+        .alert-message {
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .alert-success {
+            background-color: rgba(21, 87, 36, 0.1);
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .alert-error {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .alert-loading {
+            background-color: rgba(23, 162, 184, 0.1);
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            display: block;
+        }
+        
+        .fa-spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación Dinámica -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="brand-logo">
+                    <i class="fas fa-code"></i>
+                    <span class="brand-text">Joa Tech</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-contact" href="#contact">Contacto</a></li>
+                    <li class="nav-item">
+                        <button class="btn-theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Dinámica -->
+    <section id="inicio" class="inicio-section">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagen de perfil -->
+                <div class="col-lg-6 order-lg-2 text-center mb-5 mb-lg-0">
+                    <div class="profile-container">
+                        <div class="profile-float">
+                            <img src="img/micara.jpg" alt="Joaquín Gil — Full Stack Developer" class="profile-img">
+                            <div class="profile-glow"></div>
+                            <div class="profile-tech-badge">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto del hero -->
+                <div class="col-lg-6 order-lg-1">
+                    <p class="greeting animate__animated animate__fadeInUp">
+                        <span class="wave">👋</span> ¡Hola! Soy
+                    </p>
+                    <h1 class="name-title animate__animated animate__fadeInUp">
+                        Joaquín <span class="highlight typed-name">Gil</span> Apesteguia
+                    </h1>
+                    <div class="availability-badge animate__animated animate__fadeInUp">
+                        <span class="availability-dot"></span> Disponible para proyectos
+                    </div>
+                    <h2 class="role animate__animated animate__fadeInUp">
+                        <span class="dynamic-text">
+                            <span class="text-item active">Técnico en Programación Web</span>
+                            <span class="text-item">Desarrollador Full Stack Jr.</span>
+                            <span class="text-item">Desarrollador de Software Junior</span>
+                        </span>
+                    </h2>
+                    <p class="intro-text animate__animated animate__fadeInUp">
+                        Desarrollo soluciones web <strong>full stack</strong> — desde el diseño hasta el deploy. 
+                        Trabajo con HTML, CSS, JavaScript, PHP, MySQL y WordPress para construir sitios funcionales, 
+                        modernos y orientados a resultados. Disponible para proyectos <strong>freelance y posiciones junior</strong>.
+                    </p>
+                    <div class="hero-actions animate__animated animate__fadeInUp">
+                        <a href="#portfolio" class="btn btn-primary me-3 btn-hover-effect">
+                            <i class="fas fa-code me-2"></i>Ver Proyectos
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="cv/Joaquin-Gil-Apesteguia-CV.pdf" download class="btn btn-outline-warning me-3 btn-hover-effect">
+                            <i class="fas fa-file-pdf me-2"></i>Descargar CV
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-hover-effect">
+                            <i class="fas fa-envelope me-2"></i>Contactar
+                        </a>
+                    </div>
+                    
+                </div><!-- fin col texto -->
+            </div><!-- fin row -->
+        </div><!-- fin container -->
+        <a href="#sobre-mi" class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </a>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="sobre-mi-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Sobre <span class="highlight">Mí</span></h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="100">
+                        Soy desarrollador web full stack con base técnica formal y experiencia en proyectos reales. 
+                        Me especializo en construir soluciones digitales funcionales, desde sitios corporativos 
+                        hasta plataformas de turismo. Trabajo con atención al detalle, código limpio y enfoque 
+                        en la experiencia del usuario final.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="personal-info-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Perfil Profesional</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Ubicación:</strong>
+                                <p>Buenos Aires, Argentina · Disponible para trabajo remoto</p>
+                            </div>
+                        </div>
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <strong>Idiomas:</strong>
+                                <p>Español (nativo) · Inglés (intermedio — certificado)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Disponibilidad:</strong>
+                                <p>Freelance y posiciones junior · Respuesta en menos de 24hs</p>
+                            </div>
+                        </div>
+                        <div class="info-item hover-lift">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Formación:</strong>
+                                <p>Técnico en Programación · E.T. N°35 Latzina (2018–2024)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animated-stats mt-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="6">0</div>
+                                <div class="stat-label">Años Programando</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="7">0</div>
+                                <div class="stat-label">Proyectos Completados</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="4">0</div>
+                                <div class="stat-label">Certificaciones</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación Dinámica -->
+    <section id="educacion" class="educacion-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Educación</h2>
+            
+            <!-- Técnico en Programación -->
+            <div class="education-card hover-grow" data-aos="fade-right">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3>Escuela Técnica N°35 Ing. Eduardo Latzina</h3>
+                        <p class="degree">Técnico en Programación</p>
+                        <p class="date">2018 - 2024</p>
+                    </div>
+                </div>
+                <p>
+                    Formación técnica completa en programación, desarrollo web, y tecnologías de la información. 
+                    Especialización en desarrollo de software, bases de datos, y tecnologías web modernas.
+                </p>
+                <div class="education-actions">
+                    <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certTecnicoModal">
+                        <i class="fas fa-certificate me-2"></i>Ver Título
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Cursos y Certificaciones -->
+            <div class="education-card hover-grow" data-aos="fade-left">
+                <h3>Cursos y Certificaciones Complementarias</h3>
+                <div class="courses-list">
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Desarrollo Web 1</span>
+                            <span class="course-date">2021</span>
+                        </div>
+                        <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certWeb1Modal">
+                            Ver Certificado
+                        </button>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Desarrollo Web 2</span>
+                            <span class="course-date">2024</span>
+                        </div>
+                        <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certWeb2Modal">
+                            Ver Certificado
+                        </button>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Taller de Inglés - Nivel Intermedio</span>
+                            <span class="course-date">2020</span>
+                        </div>
+                        <button class="btn-certificate" data-bs-toggle="modal" data-bs-target="#certInglesModal">
+                            Ver Certificado
+                        </button>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="course-details">
+                            <span class="course-name">Aprende Programando</span>
+                            <span class="course-date">2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section id="experiencia" class="experiencia-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experiencia <span class="highlight">Laboral</span></h2>
+
+            <div class="experience-card hover-grow" data-aos="fade-right">
+                <div class="experience-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3>Programador Web — Reparación de Sticks</h3>
+                        <p class="position">Desarrollador Web & Técnico de Hardware</p>
+                        <p class="date">2025 – Actualidad</p>
+                    </div>
+                </div>
+                <ul class="exp-list">
+                    <li><i class="fas fa-check"></i> Desarrollo y mantenimiento de páginas web para el negocio, mejorando la presencia online del emprendimiento.</li>
+                    <li><i class="fas fa-check"></i> Diagnóstico y reparación de consolas retro (sticks arcade), logrando recuperar hardware dado por perdido.</li>
+                    <li><i class="fas fa-check"></i> Colaboración en innovación de software para procesos administrativos de uso interno.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-card hover-grow" data-aos="fade-right">
+                <div class="experience-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3>GFM Dispositivos</h3>
+                        <p class="position">Administrador Web & Soporte Técnico</p>
+                        <p class="date">2023 – 2024</p>
+                    </div>
+                </div>
+                <ul class="exp-list">
+                    <li><i class="fas fa-check"></i> Administración completa del sitio web corporativo: actualización de catálogo, edición de contenido y mantenimiento técnico continuo.</li>
+                    <li><i class="fas fa-check"></i> Soporte técnico a clientes, reduciendo tiempos de resolución de consultas sobre productos.</li>
+                    <li><i class="fas fa-check"></i> Configuración y revisión de electrodomésticos antes de entrega, asegurando el estándar de calidad del negocio.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card hover-grow" data-aos="fade-left">
+                <div class="experience-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3>Clan B Beauty Shop</h3>
+                        <p class="position">Marketing Digital & Distribución</p>
+                        <p class="date">2021 – 2023</p>
+                    </div>
+                </div>
+                <ul class="exp-list">
+                    <li><i class="fas fa-check"></i> Gestión diaria de redes sociales y plataformas digitales, manteniendo presencia activa de la marca en Instagram y Facebook.</li>
+                    <li><i class="fas fa-check"></i> Creación de contenido visual para campañas de marketing, aumentando la visibilidad orgánica del negocio.</li>
+                    <li><i class="fas fa-check"></i> Coordinación de logística de entregas en CABA, garantizando cumplimiento de pedidos a clientes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Técnicas Dinámicas -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Stack <span class="highlight">Tecnológico</span></h2>
+    
+    <div class="tools-grid mt-4" data-aos="fade-up">
+        <div class="tool-item hover-lift">
+            <i class="fab fa-html5" style="color: #E34F26;"></i>
+            <span>HTML5</span>
+        </div>
+        <div class="tool-item hover-lift">
+            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+            <span>CSS3</span>
+        </div>
+        <div class="tool-item hover-lift">
+            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+            <span>JavaScript</span>
+        </div>
+        
+        <div class="tool-item hover-lift">
+            <i class="fab fa-php" style="color: #777BB4;"></i>
+            <span>PHP</span>
+        </div>
+        <div class="tool-item hover-lift">
+            <i class="fas fa-database" style="color: #00758F;"></i>
+            <span>MySQL</span>
+        </div>
+        <div class="tool-item hover-lift">
+            <i class="fab fa-node-js" style="color: #339933;"></i>
+            <span>Node.js</span>
+        </div>
+        
+        <div class="tool-item hover-lift">
+            <i class="fab fa-wordpress" style="color: #21759B;"></i>
+            <span>WordPress</span>
+        </div>
+        <div class="tool-item hover-lift">
+            <i class="fab fa-git-alt" style="color: #F05032;"></i>
+            <span>Git</span>
+        </div>
+        <div class="tool-item hover-lift">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </div>
+    </div><!-- fin tools-grid -->
+</div><!-- fin container -->
+</section><!-- fin #skills -->
+
+
+    <!-- Portafolio de Proyectos Dinámico -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Portafolio de <span class="highlight">Proyectos</span></h2>
+            
+            <div class="row">
+
+                <!-- =====================================================
+                     PROYECTO 1 — Aaron In Rio
+                ====================================================== -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card hover-grow">
+                        <div class="project-image">
+                            <img src="img/aaroninrio.jpg" alt="Aaron In Rio — Sitio de turismo en Brasil">
+                        </div>
+                        <div class="project-content">
+                            <h3>Aaron In Rio</h3>
+                            <p>Sitio de turismo para reservas de alojamiento y tours en Río de Janeiro. Desarrollado para un cliente real, activo en producción.</p>
+                            <div class="project-tech-chips">
+                                <span class="tech-chip">PHP</span>
+                                <span class="tech-chip">MYSQL</span>
+                                <span class="tech-chip">JS</span>
+                            </div>
+                            <div class="project-role">
+                                <i class="fas fa-user-tie me-1"></i> Rol: <strong>Full Stack</strong> &nbsp;·&nbsp; <span class="project-status project-status--live">● Finalizado</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://aaroninrio.com/" target="_blank" class="btn btn-sm btn-success">
+                                    <i class="fas fa-eye me-1"></i>Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     PROYECTO 2 — Reemplazar con tu proyecto
+                     ↓ Qué cambiar:
+                       · src="img/IMAGEN.jpg"       → captura de pantalla en /img
+                       · alt="..."                  → nombre descriptivo
+                       · <h3>NOMBRE</h3>            → nombre del proyecto
+                       · <p>DESCRIPCION</p>         → 1-2 líneas enfocadas en resultado
+                       · tech-chip x3              → tus tecnologías usadas
+                       · Rol: XXXX                 → Frontend / Full Stack / etc.
+                       · project-status--live/demo → "● En producción" o "◎ Demo"
+                       · href="URL"                → link al sitio
+                ====================================================== -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="project-card hover-grow">
+        <div class="project-image">
+            <img src="img/nike-store.jpg" alt="Nike Store Interface - E-commerce Frontend">
+        </div>
+        <div class="project-content">
+            <h3>Nike Store Interface</h3>
+            <p>Desarrollo frontend para e-commerce deportivo. Enfoque en diseño responsivo, UI/UX moderno y maquetación de catálogo interactivo para optimizar la visualización de productos.</p>
+            <div class="project-tech-chips">
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">CSS3</span>
+                <span class="tech-chip">JavaScript</span>
+            </div>
+            <div class="project-role">
+                <i class="fas fa-laptop-code me-1"></i> Rol: <strong>Frontend Dev</strong> &nbsp;·&nbsp; <span class="project-status project-status--demo">◎ Demo / Challenge</span>
+            </div>
+            <div class="project-links">
+                <a href="https://nike-store-three-alpha.vercel.app/" target="_blank" class="btn btn-sm btn-success">
+                    <i class="fas fa-eye me-1"></i>Ver
+                </a>
+                </div>
+        </div>
+    </div>
+</div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+    <div class="project-card hover-grow">
+        <div class="project-image">
+            <img src="img/eVidensTalk.jpg" alt="eVidensTalk Cyber Forensic Suite">
+        </div>
+        <div class="project-content">
+            <h3>eVidensTalk</h3>
+            <p>Suite forense digital para la preservación, análisis y transcripción automática de evidencia en chats de WhatsApp para uso legal.</p>
+            <div class="project-tech-chips">
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">Tailwind</span>
+                <span class="tech-chip">EmailJS</span>
+            </div>
+            <div class="project-role">
+                <i class="fas fa-user-tie me-1"></i> Rol: <strong>Fullstack Dev</strong> &nbsp;·&nbsp; <span class="project-status project-status--demo">◎ Live Beta</span>
+            </div>
+            <div class="project-links">
+                <a href="https://evidenstalk.vercel.app/" target="_blank" class="btn btn-sm btn-success">
+                    <i class="fas fa-eye me-1"></i>Ver
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                
+            <!-- BOTÓN VER MÁS -->
+            <div class="row mt-5" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-12 text-center">
+                    <a href="portafolio_full.html" class="btn btn-primary btn-lg btn-hover-effect" id="ver-mas-portfolio">
+                        <i class="fas fa-eye me-2"></i>Ver Más Proyectos
+                        <span class="btn-glow"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO CON EMAILJS FUNCIONAL -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                ¿Interesado en trabajar juntos? ¡No dudes en contactarme!
+            </p>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- FORMULARIO CON EMAILJS -->
+                    <form id="contact-form" data-aos="zoom-in">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="user_name" placeholder="Nombre *" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="user_email" placeholder="Correo electrónico *" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="user_phone" placeholder="Teléfono *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Mensaje *" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-hover-effect">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            <span class="btn-glow"></span>
+                        </button>
+                        <div id="form-message" class="mt-3 text-center"></div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-info mt-5" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-item hover-lift">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email</h4>
+                            <p><a href="mailto:joaquin.apesteguia.tech@gmail.com" class="email-link">joaquin.apesteguia.tech@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-item hover-lift">
+                            <i class="fab fa-whatsapp"></i>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/541124673417" target="_blank" class="phone-link">11-2467-3417</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-item hover-lift">
+                            <i class="fab fa-linkedin-in"></i>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/joaquin-gil-apesteguia-ignacio-a963a737a/" target="_blank" class="email-link">Ver perfil →</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://github.com/joak1267" target="_blank" class="footer-social-link" data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joaquin-gil-apesteguia-ignacio-a963a737a/" target="_blank" class="footer-social-link" data-tooltip="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/541124673417" target="_blank" class="footer-social-link" data-tooltip="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="footer-cta">¿Tenés un proyecto en mente? <a href="mailto:joaquingil.dev@gmail.com" class="footer-cta-link">Hablemos →</a></p>
+            <p>&copy; 2025 Joaquín Gil Apesteguia · Full Stack Developer · Buenos Aires, Argentina</p>
+            <p class="footer-note">Desarrollado con <i class="fas fa-heart"></i> y mucho código</p>
+        </div>
+    </footer>
+
+    <!-- Modales para Certificados -->
+    <!-- Modal Título Técnico -->
+    <div class="modal fade certificate-modal" id="certTecnicoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-graduation-cap me-2"></i>Título — Técnico en Programación
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/titulo-tecnico.jpg"
+                         alt="Título Técnico en Programación — Escuela Técnica N°35"
+                         class="img-fluid certificate-image"
+                         onerror="this.style.display='none'; document.getElementById('titulo-fallback').style.display='block'">
+                    <div id="titulo-fallback" style="display:none; padding: 40px 20px;">
+                        <i class="fas fa-graduation-cap" style="font-size:3rem; color: var(--primary-color); margin-bottom:15px; display:block;"></i>
+                        <h5 style="color: var(--primary-color); margin-bottom:8px;">Técnico en Programación</h5>
+                        <p style="color: var(--gray-color);">Escuela Técnica N°35 Ing. Eduardo Latzina · 2018–2024</p>
+                        <p style="color: var(--gray-color); font-size:0.9rem; margin-top:12px;">Documento en proceso de digitalización. Disponible para verificación a solicitud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade certificate-modal" id="certWeb1Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-certificate me-2"></i>Certificado - Desarrollo Web 1
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/Desarrollo Web 1 2021.jpg" alt="Certificado Desarrollo Web 1" class="img-fluid certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade certificate-modal" id="certWeb2Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-certificate me-2"></i>Certificado - Desarrollo Web 2
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/Desarrollo Web 2 2024.jpg" alt="Certificado Desarrollo Web 2" class="img-fluid certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade certificate-modal" id="certInglesModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-certificate me-2"></i>Certificado - Taller de Inglés
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./img/Taller Ingles 2020 Nivel Intermedio.jpg" alt="Certificado Taller de Inglés" class="img-fluid certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // ============================================
+        // INICIALIZACIÓN EMAILJS - TUS CREDENCIALES
+        // ============================================
+        (function() {
+            emailjs.init("jeM9wPRA9hYUXfgAc");
+        })();
+
+        // ============================================
+        // INICIALIZACIÓN COMPLETA DE LA PÁGINA
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Inicializar AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+            
+            // 2. Partículas para el hero
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        color: { value: "#ffffff" },
+                        shape: { type: "circle" },
+                        opacity: { value: 0.3, random: true },
+                        size: { value: 3, random: true },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#ffffff",
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 2,
+                            direction: "none",
+                            random: true,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false
+                        }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: { enable: true, mode: "repulse" },
+                            onclick: { enable: true, mode: "push" }
+                        }
+                    }
+                });
+            }
+            
+            // 3. Texto dinámico en hero
+            const textItems = document.querySelectorAll('.text-item');
+            let currentIndex = 0;
+            
+            function rotateText() {
+                if (textItems.length > 0) {
+                    textItems[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % textItems.length;
+                    textItems[currentIndex].classList.add('active');
+                }
+            }
+            
+            if (textItems.length > 0) {
+                setInterval(rotateText, 3000);
+            }
+            
+            // 4. Efecto de escritura para el nombre
+            const typedName = document.querySelector('.typed-name');
+            if (typedName) {
+                const nameText = typedName.textContent;
+                typedName.textContent = '';
+                let i = 0;
+                
+                function typeWriter() {
+                    if (i < nameText.length) {
+                        typedName.textContent += nameText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    }
+                }
+                
+                setTimeout(typeWriter, 500);
+            }
+            
+            // 5. Contadores animados
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-count');
+                    const count = +counter.innerText;
+                    const increment = target / 200;
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+            
+            // 6. Animar barras de habilidades
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const width = bar.getAttribute('data-width');
+                            bar.style.width = `${width}%`;
+                            observer.unobserve(bar);
+                        }
+                    });
+                });
+                observer.observe(bar);
+            });
+            
+            // 7. Toggle de tema claro/oscuro
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-theme');
+                    const icon = themeToggle.querySelector('i');
+                    if (document.body.classList.contains('dark-theme')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+                
+                // Cargar tema guardado
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.querySelector('i').classList.remove('fa-moon');
+                    themeToggle.querySelector('i').classList.add('fa-sun');
+                }
+            }
+            
+            // ============================================
+            // 8. FORMULARIO DE CONTACTO CON EMAILJS
+            // ============================================
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validar campos
+                    const name = this.user_name.value.trim();
+                    const email = this.user_email.value.trim();
+                    const phone = this.user_phone.value.trim();
+                    const message = this.message.value.trim();
+                    
+                    if (!name || !email || !phone || !message) {
+                        showFormMessage("❌ Completa todos los campos obligatorios (*)", "error");
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        showFormMessage("❌ Ingresa un email válido", "error");
+                        return;
+                    }
+                    
+                    // Cambiar estado del botón
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+                    submitBtn.disabled = true;
+                    
+                    // Mostrar mensaje de carga
+                    showFormMessage("⏳ Enviando tu mensaje, por favor espera...", "loading");
+                    
+                    // ============================================
+                    // ENVIAR CON EMAILJS - TUS CREDENCIALES
+                    // ============================================
+                    // TU SERVICE ID y TEMPLATE ID
+                    emailjs.sendForm('service_82dhp4l', 'template_sw19kez', this)
+                        .then(function(response) {
+                            // Mostrar éxito
+                            showFormMessage("✅ ¡Mensaje enviado exitosamente! Te responderé pronto.", "success");
+                            
+                            // Limpiar formulario
+                            contactForm.reset();
+                            
+                            // Restaurar botón después de 3 segundos
+                            setTimeout(() => {
+                                submitBtn.innerHTML = originalText;
+                                submitBtn.disabled = false;
+                            }, 3000);
+                            
+                            // Ocultar mensaje después de 5 segundos
+                            setTimeout(() => {
+                                document.getElementById('form-message').innerHTML = '';
+                            }, 5000);
+                            
+                        }, function(error) {
+                            console.error("❌ ERROR - EmailJS:", error);
+                            
+                            // Mostrar error específico
+                            let errorMsg = "❌ Error al enviar. Intenta de nuevo.";
+                            
+                            if (error.text && error.text.includes("Invalid grant")) {
+                                errorMsg = "❌ Error: Reconecta tu Gmail en EmailJS.com → Email Services → Reconnect Gmail";
+                            } else if (error.text && error.text.includes("service not found")) {
+                                errorMsg = "❌ Error: Service ID incorrecto. Verifica en EmailJS";
+                            } else if (error.text && error.text.includes("template not found")) {
+                                errorMsg = "❌ Error: Template ID incorrecto. Verifica en EmailJS";
+                            }
+                            
+                            showFormMessage(errorMsg, "error");
+                            
+                            // Restaurar botón
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        });
+                });
+            }
+            
+            // Función para mostrar mensajes en el formulario
+            function showFormMessage(message, type) {
+                const messageDiv = document.getElementById('form-message');
+                let alertClass = 'alert-loading';
+                let icon = 'fa-info-circle';
+                
+                switch(type) {
+                    case 'success':
+                        alertClass = 'alert-success';
+                        icon = 'fa-check-circle';
+                        break;
+                    case 'error':
+                        alertClass = 'alert-error';
+                        icon = 'fa-exclamation-circle';
+                        break;
+                    case 'loading':
+                        alertClass = 'alert-loading';
+                        icon = 'fa-spinner fa-spin';
+                        break;
+                }
+                
+                messageDiv.innerHTML = `
+                    <div class="alert-message ${alertClass}">
+                        <i class="fas ${icon} me-2"></i>
+                        ${message}
+                    </div>
+                `;
+            }
+            
+            // Validar email
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            // 9. Smooth scroll para navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#' || targetId === '#0') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 10. Cambiar clase activa en navegación al hacer scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Efecto en navbar al hacer scroll
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // EmailJS listo para recibir mensajes del formulario de contacto
+        });
+    </script>
+
+    <script src="dynamic-final.js"></script>
+</body>
+</html>
